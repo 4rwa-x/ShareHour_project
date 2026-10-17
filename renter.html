@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Share Hour - Request Booking</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 40px; }
+        .container { max-width: 500px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: auto; }
+        h2 { color: #2c3e50; text-align: center; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; color: #34495e; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        .price-box { background: #eef9f5; border: 1px solid #2ecc71; padding: 15px; border-radius: 5px; text-align: center; font-size: 18px; font-weight: bold; color: #27ae60; margin-top: 15px; }
+        button { width: 100%; background-color: #3498db; color: white; border: none; padding: 12px; font-size: 16px; border-radius: 5px; cursor: pointer; margin-top: 15px; }
+        button:hover { background-color: #2980b9; }
+        .nav-link { text-align: center; margin-top: 15px; }
+        .nav-link a { color: #7f8c8d; font-size: 14px; text-decoration: none; }
+        .nav-link a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Share Hour - Tool Booking</h2>
+    <form action="confirmation.html" method="GET">
+        <div class="form-group">
+            <label>Select Tool:</label>
+            <select>
+                <option>Electric Drill - 5.0 OMR/hr</option>
+                <option>Lawn Mower - 8.0 OMR/hr</option>
+                <option>Pressure Washer - 6.5 OMR/hr</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Rental Date:</label>
+            <input type="date" value="2026-10-20">
+        </div>
+        <div class="form-group">
+            <label>Start Time:</label>
+            <input type="time" value="10:00">
+        </div>
+        <div class="form-group">
+            <label>End Time:</label>
+            <input type="time" value="13:00">
+        </div>
+        <div class="price-box">
+            Total Estimated Price: 5.0 OMR
+        </div>
+        <button type="submit">Submit Booking Request</button>
+    </form>
+    
+ 
+    
+</div>
+
+</body>
+</html>
