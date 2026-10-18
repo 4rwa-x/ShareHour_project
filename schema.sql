@@ -30,3 +30,21 @@ CREATE TABLE IF NOT EXISTS bookings (
     FOREIGN KEY (renter_id) REFERENCES users(user_id),
     FOREIGN KEY (tool_id) REFERENCES tools(tool_id)
 );
+
+-- Insert Sample Users (Owners & Renters)
+INSERT INTO users (user_id, full_name, email, role) VALUES
+('owner_salim', 'Salim Al-Harthy', 'salim.harthy@email.com', 'OWNER'),
+('owner_fatma', 'Fatma Al-Zahra', 'fatma.zahra@email.com', 'OWNER'),
+('renter_ahmed', 'Ahmed Al-Busaidi', 'ahmed.busaidi@email.com', 'RENTER'),
+('renter_muna', 'Muna Al-Risi', 'muna.risi@email.com', 'RENTER');
+
+-- Insert Sample Tools
+INSERT INTO tools (tool_id, owner_id, tool_name, hourly_price) VALUES
+('tool_drill_101', 'owner_salim', 'Heavy Duty Electric Drill', 5.0),
+('tool_mower_102', 'owner_salim', 'Lawn Mower', 8.0),
+('tool_washer_103', 'owner_fatma', 'High Pressure Washer', 6.5);
+
+-- Insert Sample Bookings
+INSERT INTO bookings (renter_id, tool_id, rental_date, start_time, end_time, total_cost, status) VALUES
+('renter_ahmed', 'tool_drill_101', '2026-10-20', '10:00:00', '13:00:00', 15.0, 'PENDING'),
+('renter_muna', 'tool_mower_102', '2026-10-21', '08:00:00', '10:00:00', 16.0, 'APPROVED');
